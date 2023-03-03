@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(27, 66%, 92%);
+}
+
+@keyframes main-animation {
+    0% {
+        transform: translate(0px, 127%);
+
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+main {
+    animation: main-animation 1s ease 0s 1;
+    min-width: 321px;
+    width: 56%;
+    height: 73%;
+    max-width: 450px;
+    max-height: 545px;
+}
+
+.balance-section {
+    background-color: hsl(10, 79%, 65%);
+    height: 15%;
+    width: 100%;
+    min-height: 96px;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+    max-height: 112px;
+}
+
+.chart-section {
+    background-color: white;
+    height: 61%;
+    width: 100%;
+    border-radius: 1rem;
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    min-height: 355px;
+}
+
+.circles,
+.my-balance {
+    width: 50%;
+}
+
+.my-balance {
+    color: white;
+}
+
+.my-balance>p {
+    margin-bottom: .3rem;
+}
+
+.my-balance>h4 {
+    font-size: 1.4rem;
+}
+
+.circles {
+    display: flex;
+    justify-content: end;
+    margin-top: .7rem;
+    margin-right: 1rem;
+}
+
+.circles>.hollow-white,
+.circles>.black {
+    width: 21%;
+    height: 68%;
+    border-radius: 50%;
+}
+
+.circles>.black {
+    background-color: black;
+}
+
+.circles>.hollow-white {
+    transform: translate(20px, 0px);
+    border: 2px white solid;
+}
+
+.chart-section>.charts {
+    width: 100%;
+    min-height: 192px;
+    height: 60%;
+    display: flex;
+    padding-inline: 0.3rem;
+}
+
+.chart-section>.details {
+    width: 100%;
+    height: 21%;
+}
+
+.chart-section>.charts>.chart-container {
+    height: 100%;
+    width: calc(100% / 7);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+
+
+
+.chart-section>.charts>.chart-container>.sub-container>.bar-chart {
+
+    height: 14%;
+    border-radius: .2rem;
+    width: 77%;
+    background-color: hsl(10, 79%, 65%);
+    margin-inline: auto;
+
+}
+
+.chart-section>.charts>.chart-container>.sub-container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.chart-section>.charts>.chart-container>.sub-container>.day {
+    max-height: 2rem;
+}
+
+.chart-section>.charts>.chart-container>.sub-container>.popup {
+    height: 14%;
+    width: 92%;
+    background-color: black;
+    color: white;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 0.2rem;
+    font-size: .6rem;
+    margin-bottom: 0.3rem;
+    visibility: hidden;
+}
+
+hr {
+    margin-block: 1rem;
+}
+
+.chart-section>.details {
+    display: flex;
+
+
+}
+
+.chart-section>.details>.total,
+.chart-section>.details>.change {
+    width: 50%;
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.chart-section>h1 {
+    margin-left: 0.3rem;
+    font-size: 1rem;
+}
+
+.chart-section>.details>.change {
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 0.4rem;
+}
+
+.chart-section>.details>.total>p,
+.chart-section>.details>.change>p {
+    font-size: .7rem;
+    color: hsl(186, 34%, 60%);
+    margin-bottom: .3rem;
+}
+
+.chart-section>.details>.total>h2 {
+    font-size: 2rem;
+}
+
+.chart-section>.charts>.chart-container>.popup {
+    visibility: hidden;
+}
+
+
+
+
+
+@media (min-width:801px) and (max-width: 914px) {
+    .chart-section>.details>.total>h2 {
+        font-size: 3rem;
+    }
+
+    .chart-section>.details>.change>p,
+    .chart-section>.details>.total>p {
+        font-size: 1.3rem;
+    }
+
+    .chart-section>.details>.change>h5 {
+        font-size: 1.4rem;
+    }
+
+    .chart-section {
+        height: 53%;
+    }
+}
+
+@media (min-width: 1023px) and (max-width: 1400px) {
+    main {
+        max-width: 408px;
+    }
+}
